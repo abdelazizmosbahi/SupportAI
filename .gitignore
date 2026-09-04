@@ -1,0 +1,95 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+*.whl
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node.js / Angular
+node_modules/
+.angular/
+dist/
+tmp/
+.cache/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Logs
+*.log
+logs/
+
+# Docker
+docker-compose.override.yml
+
+# Build artifacts
+*.tar.gz
+*.zip
+
+# Test reports
+test-results/
+playwright-report/
+coverage/
+
+# Alembic
+backend/alembic/versions/*.py
+!backend/alembic/versions/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Terraform
+infrastructure/terraform/.terraform/
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.backup
+infrastructure/terraform/*.tfvars
+!infrastructure/terraform/*.tfvars.example
+
+# Ollama models (large files)
+models/
+
+# MinIO data
+minio-data/
