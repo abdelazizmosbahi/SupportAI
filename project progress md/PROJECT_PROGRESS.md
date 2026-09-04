@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-003 — Bootstrap FastAPI Backend
+TASK-004 — Configure PostgreSQL and SQLAlchemy
 
 Status: TODO
 
@@ -18,6 +18,7 @@ Status: TODO
 
 - TASK-001 — Initialize Git Repository and Create .gitignore
 - TASK-002 — Bootstrap Angular Frontend
+- TASK-003 — Bootstrap FastAPI Backend
 
 ## In Progress
 
@@ -72,15 +73,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-002 — Bootstrap Angular Frontend
+TASK-003 — Bootstrap FastAPI Backend
 
 ## Last Commit
 
-TASK-002: Bootstrap Angular frontend with Material, Tailwind, and routing — 2026-09-04 15:20
+TASK-003: Bootstrap FastAPI backend with layered architecture — 2026-09-04 15:35
 
 ## Next Task
 
-TASK-003
+TASK-004
 
 ## Important Notes
 
@@ -122,4 +123,4 @@ SupportAI/
 
 ## Git Status
 
-Initialized. 1 commit on `master`. Working tree clean.
+Initialized. 2 commits on `main`. Working tree clean.

@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -74,4 +74,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 15:35
+
+Git commit: TASK-003: Bootstrap FastAPI backend with layered architecture — 2026-09-04 15:35
