@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -63,4 +63,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 16:50
+
+Git commit: TASK-010: Implement JWT authentication with login and token validation — 2026-09-04 16:50

@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-010 — Implement JWT Authentication
+TASK-011 — Implement Refresh Tokens
 
 Status: TODO
 
@@ -25,6 +25,7 @@ Status: TODO
 - TASK-007 — Create Docker Compose Development Environment
 - TASK-008 — Create Backend Dockerfile and Add Backend to Docker Compose
 - TASK-009 — Implement User Registration
+- TASK-010 — Implement JWT Authentication
 
 ## In Progress
 
@@ -79,15 +80,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-009 — Implement User Registration
+TASK-010 — Implement JWT Authentication
 
 ## Last Commit
 
-TASK-009: Implement user registration with Argon2 password hashing — 2026-09-04 16:40
+TASK-010: Implement JWT authentication with login and token validation — 2026-09-04 16:50
 
 ## Next Task
 
-TASK-010
+TASK-011
 
 ## Important Notes
 
