@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -66,4 +66,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 16:40
+
+Git commit: TASK-009: Implement user registration with Argon2 password hashing — 2026-09-04 16:40

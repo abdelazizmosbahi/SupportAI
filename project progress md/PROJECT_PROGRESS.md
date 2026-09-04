@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-009 — Implement User Registration
+TASK-010 — Implement JWT Authentication
 
 Status: TODO
 
@@ -23,11 +23,8 @@ Status: TODO
 - TASK-005 — Configure Alembic Migrations
 - TASK-006 — Create Application Configuration System
 - TASK-007 — Create Docker Compose Development Environment
-
-## Deferred (Docker tasks - resume after app development)
-
 - TASK-008 — Create Backend Dockerfile and Add Backend to Docker Compose
-- TASK-039 — Create Frontend Dockerfile and Complete Docker Compose
+- TASK-009 — Implement User Registration
 
 ## In Progress
 
@@ -82,15 +79,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-007 — Create Docker Compose Development Environment
+TASK-009 — Implement User Registration
 
 ## Last Commit
 
-TASK-008: Create backend Dockerfile and add to Docker Compose — 2026-09-04 16:30
+TASK-009: Implement user registration with Argon2 password hashing — 2026-09-04 16:40
 
 ## Next Task
 
-TASK-009
+TASK-010
 
 ## Important Notes
 
