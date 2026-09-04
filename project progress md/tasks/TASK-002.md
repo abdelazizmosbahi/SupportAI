@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -67,4 +67,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 15:20
+
+Git commit: TASK-002: Bootstrap Angular frontend with Material, Tailwind, and routing — 2026-09-04 15:20
