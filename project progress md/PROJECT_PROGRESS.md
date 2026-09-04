@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-004 — Configure PostgreSQL and SQLAlchemy
+TASK-005 — Configure Alembic Migrations
 
 Status: TODO
 
@@ -19,6 +19,7 @@ Status: TODO
 - TASK-001 — Initialize Git Repository and Create .gitignore
 - TASK-002 — Bootstrap Angular Frontend
 - TASK-003 — Bootstrap FastAPI Backend
+- TASK-004 — Configure PostgreSQL and SQLAlchemy
 
 ## In Progress
 
@@ -73,15 +74,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-003 — Bootstrap FastAPI Backend
+TASK-004 — Configure PostgreSQL and SQLAlchemy
 
 ## Last Commit
 
-TASK-003: Bootstrap FastAPI backend with layered architecture — 2026-09-04 15:35
+TASK-004: Configure PostgreSQL and SQLAlchemy with async support — 2026-09-04 15:42
 
 ## Next Task
 
-TASK-004
+TASK-005
 
 ## Important Notes
 

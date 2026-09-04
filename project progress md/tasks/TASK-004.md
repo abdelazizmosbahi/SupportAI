@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -61,4 +61,6 @@ PostgreSQL will be provided via Docker Compose in TASK-007.
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 15:42
+
+Git commit: TASK-004: Configure PostgreSQL and SQLAlchemy with async support — 2026-09-04 15:42
