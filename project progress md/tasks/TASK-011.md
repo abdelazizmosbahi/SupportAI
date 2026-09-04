@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -63,4 +63,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 17:10
+
+Git commit: TASK-011: Implement refresh tokens with rotation and logout — 2026-09-04 17:10

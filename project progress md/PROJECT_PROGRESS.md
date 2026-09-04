@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-011 — Implement Refresh Tokens
+TASK-012 — Password Reset Flow
 
 Status: TODO
 
@@ -26,6 +26,7 @@ Status: TODO
 - TASK-008 — Create Backend Dockerfile and Add Backend to Docker Compose
 - TASK-009 — Implement User Registration
 - TASK-010 — Implement JWT Authentication
+- TASK-011 — Implement Refresh Tokens
 
 ## In Progress
 
@@ -80,15 +81,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-010 — Implement JWT Authentication
+TASK-011 — Implement Refresh Tokens
 
 ## Last Commit
 
-TASK-010: Implement JWT authentication with login and token validation — 2026-09-04 16:50
+TASK-011: Implement refresh tokens with rotation and logout — 2026-09-04 17:10
 
 ## Next Task
 
-TASK-011
+TASK-012
 
 ## Important Notes
 
