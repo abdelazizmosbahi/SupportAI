@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-008 — Create Backend Dockerfile and Add Backend to Docker Compose
+TASK-009 — Implement User Registration
 
 Status: TODO
 
@@ -23,6 +23,11 @@ Status: TODO
 - TASK-005 — Configure Alembic Migrations
 - TASK-006 — Create Application Configuration System
 - TASK-007 — Create Docker Compose Development Environment
+
+## Deferred (Docker tasks - resume after app development)
+
+- TASK-008 — Create Backend Dockerfile and Add Backend to Docker Compose
+- TASK-039 — Create Frontend Dockerfile and Complete Docker Compose
 
 ## In Progress
 
@@ -81,11 +86,11 @@ TASK-007 — Create Docker Compose Development Environment
 
 ## Last Commit
 
-TASK-007: Create Docker Compose development environment — 2026-09-04 16:10
+TASK-008: Create backend Dockerfile and add to Docker Compose — 2026-09-04 16:30
 
 ## Next Task
 
-TASK-008
+TASK-009
 
 ## Important Notes
 
