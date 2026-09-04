@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -57,4 +57,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 15:50
+
+Git commit: TASK-005: Configure Alembic migrations with async support — 2026-09-04 15:50

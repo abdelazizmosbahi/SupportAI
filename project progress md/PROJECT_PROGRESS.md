@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-005 — Configure Alembic Migrations
+TASK-006 — Create Application Configuration System
 
 Status: TODO
 
@@ -20,6 +20,7 @@ Status: TODO
 - TASK-002 — Bootstrap Angular Frontend
 - TASK-003 — Bootstrap FastAPI Backend
 - TASK-004 — Configure PostgreSQL and SQLAlchemy
+- TASK-005 — Configure Alembic Migrations
 
 ## In Progress
 
@@ -74,15 +75,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-004 — Configure PostgreSQL and SQLAlchemy
+TASK-005 — Configure Alembic Migrations
 
 ## Last Commit
 
-TASK-004: Configure PostgreSQL and SQLAlchemy with async support — 2026-09-04 15:42
+TASK-005: Configure Alembic migrations with async support — 2026-09-04 15:50
 
 ## Next Task
 
-TASK-005
+TASK-006
 
 ## Important Notes
 
