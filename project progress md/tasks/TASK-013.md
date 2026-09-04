@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -66,4 +66,6 @@ None
 
 ## Completion
 
-Not completed.
+Completed: 2026-09-04 17:35
+
+Git commit: TASK-013: Implement organization CRUD with memberships and roles — 2026-09-04 17:35

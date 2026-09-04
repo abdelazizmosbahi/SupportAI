@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-013 — Implement Organizations
+TASK-014 — Implement Memberships and RBAC
 
 Status: TODO
 
@@ -28,6 +28,7 @@ Status: TODO
 - TASK-010 — Implement JWT Authentication
 - TASK-011 — Implement Refresh Tokens
 - TASK-012 — Implement Angular Auth Module
+- TASK-013 — Implement Organizations
 
 ## In Progress
 
@@ -82,15 +83,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-012 — Implement Angular Auth Module
+TASK-013 — Implement Organizations
 
 ## Last Commit
 
-TASK-012: Implement Angular auth module with login, registration, interceptor, and guards — 2026-09-04 17:20
+TASK-013: Implement organization CRUD with memberships and roles — 2026-09-04 17:35
 
 ## Next Task
 
-TASK-013
+TASK-014
 
 ## Important Notes
 
