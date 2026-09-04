@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-012 — Password Reset Flow
+TASK-013 — Implement Organizations
 
 Status: TODO
 
@@ -27,6 +27,7 @@ Status: TODO
 - TASK-009 — Implement User Registration
 - TASK-010 — Implement JWT Authentication
 - TASK-011 — Implement Refresh Tokens
+- TASK-012 — Implement Angular Auth Module
 
 ## In Progress
 
@@ -81,15 +82,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-011 — Implement Refresh Tokens
+TASK-012 — Implement Angular Auth Module
 
 ## Last Commit
 
-TASK-011: Implement refresh tokens with rotation and logout — 2026-09-04 17:10
+TASK-012: Implement Angular auth module with login, registration, interceptor, and guards — 2026-09-04 17:20
 
 ## Next Task
 
-TASK-012
+TASK-013
 
 ## Important Notes
 
