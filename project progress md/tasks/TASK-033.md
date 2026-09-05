@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Build the Angular knowledge base page with document upload, list, and status tracking.
+Build the React knowledge base page with document upload, list, and status tracking.
 
 ## Context
 

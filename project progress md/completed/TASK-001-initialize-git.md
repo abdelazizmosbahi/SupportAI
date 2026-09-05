@@ -15,7 +15,7 @@ Initialized Git repository and created comprehensive `.gitignore` covering all s
 ## Implementation
 
 - Ran `git init` in project root
-- Created `.gitignore` with patterns for: Python, Node.js/Angular, Docker, IDE, OS, Logs, Build artifacts, Alembic, Test reports, Terraform state, Ollama models, MinIO data
+- Created `.gitignore` with patterns for: Python, Node.js/React (node_modules, dist, coverage), Docker, IDE, OS, Logs, Build artifacts, Alembic, Test reports, Terraform state, Ollama models, MinIO data
 
 ## Files Changed
 
@@ -55,7 +55,7 @@ None
 
 ## Follow-up Work
 
-TASK-002 — Bootstrap Angular Frontend
+TASK-002 — Bootstrap React Frontend
 
 ## Git Commit
 
@@ -65,4 +65,4 @@ Commit: `1034ae918cb6fd3d3e78c999269e374e5ae079d4`
 
 ## Notes For Next Task
 
-Git is initialized on `master` branch. Next task creates the Angular frontend in `frontend/` directory.
+Git is initialized on `master` branch. Next task creates the React frontend in `frontend/` directory.

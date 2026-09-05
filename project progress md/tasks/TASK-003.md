@@ -10,7 +10,7 @@ Create the FastAPI backend application with the layered architecture defined in 
 
 ## Context
 
-TASK-002 creates the Angular frontend. This task creates the FastAPI backend skeleton.
+TASK-002 creates the React frontend. This task creates the FastAPI backend skeleton.
 
 ## Requirements
 

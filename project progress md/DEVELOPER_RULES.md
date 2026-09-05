@@ -87,7 +87,7 @@ When adding/changing APIs: update Pydantic schemas, update routes, update valida
 
 ## Rule 19 — Frontend changes
 
-When modifying Angular: maintain feature-based structure, avoid putting business logic directly into templates, use services for API communication, use guards for route protection, use interceptors for authentication, handle loading/error/empty states, maintain responsive behavior.
+When modifying React: maintain feature-based structure, keep components small and focused, use Tailwind + MUI for styling, use TanStack Query for server state, keep auth state in React Context, use axios for API calls, use React Router protected routes, handle loading/error/empty states, maintain responsive behavior.
 
 ## Rule 20 — AI/RAG changes
 

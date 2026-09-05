@@ -6,7 +6,7 @@ DONE
 
 ## Objective
 
-Initialize a Git repository for SupportAI and create a comprehensive `.gitignore` file that covers all technologies in the stack: Python, Node.js/Angular, Docker, IDE files, environment files, and build artifacts.
+Initialize a Git repository for SupportAI and create a comprehensive `.gitignore` file that covers all technologies in the stack: Python, Node.js/React, Docker, IDE files, environment files, and build artifacts.
 
 ## Context
 
@@ -15,7 +15,7 @@ This is the first task. The project root currently contains only `roadmap.md` an
 ## Requirements
 
 - Initialize Git repository
-- Create `.gitignore` covering: Python (__pycache__, .venv, *.pyc), Node (node_modules, dist, .angular), Docker (unnecessary volumes), IDE (.vscode, .idea, *.swp), Environment (.env, .env.local), OS (.DS_Store, Thumbs.db), Logs (*.log), Build artifacts, Alembic versions (generated), Test coverage reports
+- Create `.gitignore` covering: Python (__pycache__, .venv, *.pyc), Node (node_modules, dist, coverage), Docker (unnecessary volumes), IDE (.vscode, .idea, *.swp), Environment (.env, .env.local), OS (.DS_Store, Thumbs.db), Logs (*.log), Build artifacts, Alembic versions (generated), Test coverage reports
 - Do NOT ignore `roadmap.md`, `initial_prompt.md`, or the `project progress md/` directory
 - Do NOT ignore `.env.example`
 

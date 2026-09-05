@@ -1,6 +1,6 @@
 # SupportAI — AI Customer Support Platform
 
-> A production-oriented, multi-tenant AI customer-support platform built with Angular, FastAPI, PostgreSQL/pgvector, local open-source LLMs, Docker, CI/CD, observability, and infrastructure automation.
+> A production-oriented, multi-tenant AI customer-support platform built with React, FastAPI, PostgreSQL/pgvector, local open-source LLMs, Docker, CI/CD, observability, and infrastructure automation.
 
 ---
 
@@ -97,15 +97,15 @@ The project is intended to demonstrate knowledge of:
 
 ## Frontend
 
-- Angular
+- React
 - TypeScript
-- RxJS
+- TanStack Query
 - Component architecture
 - State management
 - Forms
 - Authentication
-- Guards
-- HTTP interceptors
+- Protected routes
+- HTTP client interceptors (axios)
 - Error handling
 - Responsive UI
 - Real-time interfaces
@@ -264,7 +264,7 @@ High-level architecture:
               |                           |
               v                           v
        +-------------+             +-------------+
-       |   Angular   |             |   FastAPI   |
+        |    React    |             |   FastAPI   |
        |   Frontend  |             |   Backend   |
        +-------------+             +------+------+ 
                                            |
@@ -298,10 +298,10 @@ High-level architecture:
 
 5. Technology Stack
 5.1 Frontend
-Angular
+React
 TypeScript
-RxJS
-Angular Material
+TanStack Query
+MUI Material
 Tailwind CSS
 
 5.2 Backend
@@ -363,7 +363,7 @@ Jaeger
 5.9 Testing
 Pytest
 Playwright
-Angular Testing
+React Testing Library
 
 6. System Components
 
@@ -502,7 +502,7 @@ longer-lived
 
 The backend validates tokens.
 
-Angular uses an HTTP interceptor to attach:
+React uses an HTTP client interceptor (axios) to attach:
 
 Authorization: Bearer <token>
 
@@ -517,7 +517,7 @@ Argon2
 
 for password hashing.
 
-9.2 Angular Route Guards
+9.2 React Route Guards
 
 Example protected routes:
 
@@ -550,38 +550,32 @@ Agent
 
 10. Frontend Architecture
 
-Recommended Angular structure:
+Recommended React structure:
 
-src/
-└── app/
-    ├── core/
-    │   ├── auth/
-    │   ├── guards/
-    │   ├── interceptors/
-    │   ├── services/
-    │   └── models/
-    │
-    ├── shared/
-    │   ├── components/
-    │   ├── pipes/
-    │   ├── directives/
-    │   └── utils/
-    │
-    ├── features/
-    │   ├── dashboard/
-    │   ├── conversations/
-    │   ├── knowledge-base/
-    │   ├── evaluations/
-    │   ├── analytics/
-    │   ├── tickets/
-    │   └── settings/
-    │
-    ├── layout/
-    │   ├── sidebar/
-    │   ├── header/
-    │   └── navigation/
-    │
-    └── app.routes.ts
+frontend/src/
+├── api/
+│   ├── client.ts
+│   └── auth.ts
+├── auth/
+│   ├── AuthContext.tsx
+│   └── ProtectedRoute.tsx
+├── features/
+│   ├── dashboard/
+│   ├── conversations/
+│   ├── knowledge-base/
+│   ├── evaluations/
+│   ├── analytics/
+│   ├── tickets/
+│   └── settings/
+├── layout/
+│   ├── AppLayout.tsx
+│   ├── Sidebar.tsx
+│   └── Header.tsx
+├── pages/
+│   ├── Login.tsx
+│   └── Register.tsx
+├── App.tsx
+└── main.tsx
 
 10.1 Main Pages
 Login
@@ -904,7 +898,7 @@ CSV
 Markdown
 
 13.1 Upload Flow
-Angular
+React
    |
    | multipart/form-data
    v
@@ -1176,7 +1170,7 @@ AI responses should stream to the frontend.
 
 Flow:
 
-Angular
+React
    |
    | POST message
    v
@@ -1194,7 +1188,7 @@ FastAPI
    |
    | SSE
    v
-Angular
+React
 
 
 This creates a real-time ChatGPT-style experience.
@@ -1302,7 +1296,7 @@ Calculate metrics
 Store results
        |
        v
-Angular dashboard
+React dashboard
 
 18.3 Evaluation Dashboard
 
@@ -1893,7 +1887,7 @@ Docker
 Docker Compose
 Node.js
 Python
-Angular CLI
+Vite
 
 
 Optional:
@@ -2095,7 +2089,7 @@ Nginx
    +----------------+
    |                |
    v                v
-Angular           FastAPI
+React             FastAPI
                      |
           +----------+----------+
           |          |          |
@@ -2250,7 +2244,7 @@ supportai/
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   ├── angular.json
+│   ├── vite.config.ts
 │   ├── package.json
 │   └── Dockerfile
 │
@@ -2456,7 +2450,7 @@ pagination
 connection pooling
 
 
-Never return thousands of records to Angular at once.
+Never return thousands of records to the React frontend at once.
 
 Use:
 
@@ -2592,7 +2586,7 @@ Phase 1 — Project Setup
 Implement:
 
 Git repository
-Angular
+React
 FastAPI
 PostgreSQL
 Docker Compose
@@ -2601,7 +2595,7 @@ Basic CI
 
 Deliverable:
 
-Angular -> FastAPI -> PostgreSQL
+React -> FastAPI -> PostgreSQL
 
 Phase 2 — Authentication
 
@@ -2612,8 +2606,8 @@ Login
 JWT
 Refresh tokens
 Password hashing
-Angular guards
-HTTP interceptor
+React protected routes
+HTTP client interceptor (axios)
 
 
 Deliverable:
@@ -2820,7 +2814,7 @@ Short Version
 
 SupportAI — AI Customer Support Platform
 
-Built a multi-tenant AI customer-support platform using Angular, FastAPI,
+Built a multi-tenant AI customer-support platform using React, FastAPI,
 PostgreSQL/pgvector and locally hosted open-source LLMs, implementing
 RAG-based document retrieval, streaming conversations, human handoff,
 RBAC, automated AI evaluation, background processing and audit logging.
@@ -2831,9 +2825,9 @@ infrastructure automation, monitoring, logging and distributed tracing.
 
 The project demonstrates:
 
-Angular
+React
 TypeScript
-RxJS
+TanStack Query
 Python
 FastAPI
 REST
@@ -2873,8 +2867,8 @@ CI/CD
 This project should allow you to discuss:
 
 Frontend
-Angular architecture
-RxJS
+React architecture
+TanStack Query
 HTTP interceptors
 route guards
 component design
@@ -2938,8 +2932,8 @@ The complete system:
               |                             |
               v                             v
       +---------------+             +---------------+
-      |    Angular    |             |    FastAPI    |
-      |  TypeScript   |             |    Backend    |
+       |    React      |             |    FastAPI    |
+       |  TypeScript   |             |    Backend    |
       +---------------+             +-------+-------+
                                             |
               +-----------------------------+-------------------------+
@@ -2972,7 +2966,7 @@ The complete system:
                          Answer + Sources
                                  |
                                  v
-                             Angular
+                             React
 
 
                        OBSERVABILITY LAYER
@@ -3157,6 +3151,6 @@ That is the level of project that can serve as a flagship portfolio project and 
 
 ### A small but important recommendation
 
-Don't try to implement all 52 sections simultaneously. The **roadmap inside the document is the order I'd actually follow**. Start with Angular → FastAPI → PostgreSQL → auth → multi-tenancy, then progressively add RAG, local LLMs, workers, evaluation, observability and DevOps.
+Don't try to implement all 52 sections simultaneously. The **roadmap inside the document is the order I'd actually follow**. Start with React → FastAPI → PostgreSQL → auth → multi-tenancy, then progressively add RAG, local LLMs, workers, evaluation, observability and DevOps.
 
-The final project should be **deep rather than merely having a huge technology list**. A working tenant-isolated RAG pipeline with tests, monitoring, CI/CD and a polished Angular dashboard is far more valuable on your CV than 20 technologies that are only superficially integrated.
+The final project should be **deep rather than merely having a huge technology list**. A working tenant-isolated RAG pipeline with tests, monitoring, CI/CD and a polished React dashboard is far more valuable on your CV than 20 technologies that are only superficially integrated.

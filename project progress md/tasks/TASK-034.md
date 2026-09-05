@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Build the Angular settings page with organization management, member management, and user profile.
+Build the React settings page with organization management, member management, and user profile.
 
 ## Context
 

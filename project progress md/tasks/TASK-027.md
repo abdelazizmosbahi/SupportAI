@@ -1,4 +1,4 @@
-# TASK-027 — Implement Angular Chat UI
+# TASK-027 — Implement React Chat UI
 
 ## Status
 
@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Build the Angular conversations page with two-panel layout: conversation list and chat view with streaming responses.
+Build the React conversations page with two-panel layout: conversation list and chat view with streaming responses.
 
 ## Context
 

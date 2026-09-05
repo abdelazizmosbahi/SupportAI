@@ -1,4 +1,4 @@
-# TASK-032 — Implement Angular Dashboard and Analytics UI
+# TASK-032 — Implement React Dashboard and Analytics UI
 
 ## Status
 
@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Build the Angular dashboard page showing key metrics and the analytics page with charts.
+Build the React dashboard page showing key metrics and the analytics page with charts.
 
 ## Context
 

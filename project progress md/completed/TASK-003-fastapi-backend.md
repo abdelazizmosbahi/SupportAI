@@ -81,7 +81,7 @@ None (PostgreSQL connection configured but not connected yet)
 - Used `pyproject.toml` for modern Python packaging
 - Created `requirements.txt` for Docker/pip compatibility
 - Config uses pydantic-settings with `.env` file support
-- CORS configured for Angular dev server (localhost:4200)
+- CORS configured for React dev server (localhost:5173)
 
 ## Known Limitations
 

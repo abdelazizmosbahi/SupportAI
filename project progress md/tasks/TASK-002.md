@@ -1,4 +1,4 @@
-# TASK-002 — Bootstrap Angular Frontend
+# TASK-002 — Bootstrap React Frontend
 
 ## Status
 
@@ -6,56 +6,50 @@ DONE
 
 ## Objective
 
-Create the Angular frontend application with the project structure defined in the roadmap: core, shared, features, and layout modules. Configure TypeScript, Angular Material, Tailwind CSS, and RxJS.
+Create the React frontend application with the project structure defined in the roadmap: api, auth, features, layout, pages. Configure TypeScript, Vite, React Router, MUI, Tailwind CSS, and TanStack Query.
 
 ## Context
 
-TASK-001 initializes Git. This task creates the Angular application skeleton.
+TASK-001 initializes Git. This task creates the React application skeleton.
 
 ## Requirements
 
-- Create Angular application using Angular CLI
-- Configure Angular Material
-- Configure Tailwind CSS
-- Set up feature-based directory structure:
-  - `src/app/core/` (auth, guards, interceptors, services, models)
-  - `src/app/shared/` (components, pipes, directives, utils)
-  - `src/app/features/` (dashboard, conversations, knowledge-base, evaluations, analytics, tickets, settings)
-  - `src/app/layout/` (sidebar, header, navigation)
-- Configure routing
-- Set up basic app component
+- Create Vite + React + TypeScript app in `frontend/`
+- Configure React Router
+- Configure MUI (Material UI) + Tailwind CSS
+- Configure TanStack Query
+- Configure axios HTTP client
+- Set up feature-based directory structure
+- Configure ESLint
 
 ## Files Expected To Change
 
-- `frontend/` (entire directory - new)
-- `frontend/angular.json`
+- `frontend/vite.config.ts`
 - `frontend/package.json`
-- `frontend/tsconfig.json`
-- `frontend/src/`
+- `frontend/src/App.tsx`
+- `frontend/src/main.tsx`
 
 ## Implementation Plan
 
-1. Create `frontend/` directory
-2. Initialize Angular project with Angular CLI
-3. Add Angular Material
-4. Add Tailwind CSS
-5. Create directory structure
-6. Configure routing
-7. Create basic layout components
+1. Scaffold Vite react-ts project in `frontend/`
+2. Add dependencies (React Router, TanStack Query, axios, MUI, Tailwind)
+3. Configure Tailwind + MUI theme
+4. Set up React Router routes
+5. Set up TanStack Query provider
+6. Add axios client
+7. Create layout placeholder
 8. Verify build succeeds
 
 ## Acceptance Criteria
 
-- [ ] Angular project created in `frontend/`
-- [ ] Angular Material configured
-- [ ] Tailwind CSS configured
-- [ ] Feature-based directory structure created
-- [ ] `ng build` succeeds
-- [ ] `ng lint` passes
+- [ ] React project created in `frontend/`
+- [ ] Routing configured
+- [ ] Tailwind/MUI configured
+- [ ] Build succeeds
 
 ## Tests Required
 
-- [ ] Angular build succeeds without errors
+- [ ] React build succeeds without errors
 
 ## Dependencies
 
@@ -67,6 +61,6 @@ None
 
 ## Completion
 
-Completed: 2026-09-04 15:20
+Completed: 2026-09-04 18:00
 
-Git commit: TASK-002: Bootstrap Angular frontend with Material, Tailwind, and routing — 2026-09-04 15:20
+Git commit: TASK-002: Bootstrap React frontend with Vite, Material UI, Tailwind, and routing — 2026-09-04 18:00

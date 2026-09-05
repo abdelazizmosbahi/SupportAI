@@ -1,4 +1,4 @@
-# TASK-012 — Implement Angular Auth Module
+# TASK-012 — Implement React Auth Module
 
 ## Status
 
@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Implement the Angular authentication module with login page, auth service, HTTP interceptor for token attachment, and route guards for protected routes.
+Implement the React authentication module with login page, auth context/service, axios interceptor for token attachment, and protected routes.
 
 ## Context
 
@@ -14,11 +14,11 @@ TASK-011 completes backend auth. This task builds the frontend auth.
 
 ## Requirements
 
-- Create login page component
-- Create registration page component
-- Create auth service (login, register, logout, getCurrentUser)
-- Create HTTP interceptor to attach `Authorization: Bearer <token>`
-- Create auth guard for protected routes
+- Create login page
+- Create registration page
+- Create AuthContext + auth service (login, register, logout, getCurrentUser)
+- Create axios interceptor to attach `Authorization: Bearer <token>`
+- Create ProtectedRoute component for protected routes
 - Store tokens in localStorage
 - Handle token refresh on 401
 - Configure routing for auth pages
@@ -26,21 +26,21 @@ TASK-011 completes backend auth. This task builds the frontend auth.
 
 ## Files Expected To Change
 
-- `frontend/src/app/features/auth/` (new)
-- `frontend/src/app/core/auth/` (new)
-- `frontend/src/app/core/guards/` (new)
-- `frontend/src/app/core/interceptors/` (new)
-- `frontend/src/app/app.routes.ts` (update)
+- `frontend/src/api/` (new)
+- `frontend/src/auth/` (new)
+- `frontend/src/pages/` (new)
+- `frontend/src/App.tsx` (update)
 
 ## Implementation Plan
 
-1. Create auth service
-2. Create HTTP interceptor
-3. Create auth guard
-4. Create login component
-5. Create registration component
-6. Configure routing
-7. Test auth flow
+1. Create auth API service
+2. Create axios interceptor
+3. Create AuthContext
+4. Create ProtectedRoute
+5. Create login page
+6. Create registration page
+7. Configure routing
+8. Test auth flow
 
 ## Acceptance Criteria
 
@@ -48,13 +48,13 @@ TASK-011 completes backend auth. This task builds the frontend auth.
 - [ ] Registration page renders and submits
 - [ ] Token stored in localStorage
 - [ ] Interceptor attaches token to requests
-- [ ] Guard protects routes
+- [ ] ProtectedRoute protects routes
 - [ ] Unauthenticated users redirected to login
 
 ## Tests Required
 
 - [ ] Auth service tests
-- [ ] Guard tests
+- [ ] ProtectedRoute tests
 
 ## Dependencies
 
@@ -66,6 +66,8 @@ None
 
 ## Completion
 
-Completed: 2026-09-04 17:20
+Not completed.
 
-Git commit: TASK-012: Implement Angular auth module with login, registration, interceptor, and guards — 2026-09-04 17:20
+## Update Notes
+
+Git commit: TASK-012: Implement React auth module with login, registration, interceptor, and guards — 2026-09-04 18:00

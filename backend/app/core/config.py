@@ -58,7 +58,7 @@ class Settings(BaseSettings):
     RATE_LIMIT_AI_PER_MINUTE: int = 20
 
     # CORS
-    CORS_ORIGINS: list[str] = ["http://localhost:4200"]
+    CORS_ORIGINS: list[str] = ["http://localhost:5173"]
 
     # Logging
     LOG_LEVEL: str = "INFO"

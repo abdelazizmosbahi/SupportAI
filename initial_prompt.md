@@ -125,7 +125,7 @@ Status: IN PROGRESS
 
 ## Todo
 
-- TASK-002 — Create Angular application
+- TASK-002 — Create React application
 - TASK-003 — Create FastAPI application
 - TASK-004 — Configure PostgreSQL
 ...
@@ -171,7 +171,7 @@ dependent on previous tasks when necessary
 Example:
 
 TASK-001 — Initialize repository and development environment
-TASK-002 — Bootstrap Angular frontend
+TASK-002 — Bootstrap React frontend
 TASK-003 — Bootstrap FastAPI backend
 TASK-004 — Configure PostgreSQL and SQLAlchemy
 TASK-005 — Configure Alembic migrations
@@ -442,7 +442,7 @@ Example:
 
 If working on authentication:
 
-Do not inspect every Angular component, every backend service, every Docker file, and every Terraform module.
+Do not inspect every React component, every backend service, every Docker file, and every Terraform module.
 
 Focus on:
 
@@ -779,17 +779,7 @@ FastAPI OpenAPI documentation should remain accurate.
 
 25. Frontend Changes
 
-When modifying Angular:
-
-maintain feature-based structure
-avoid putting business logic directly into templates
-use services for API communication
-use guards for route protection
-use interceptors for authentication
-handle loading states
-handle error states
-handle empty states
-maintain responsive behavior
+When modifying React: maintain feature-based structure, keep components small and focused, use Tailwind + MUI for styling, use TanStack Query for server state, keep auth state in React Context, use axios for API calls, use React Router protected routes, handle loading/error/empty states, maintain responsive behavior.
 26. AI/RAG Changes
 
 When modifying the AI system, always consider:

@@ -6,7 +6,7 @@ TODO
 
 ## Objective
 
-Create Dockerfile for the Angular frontend and complete the Docker Compose configuration with Nginx reverse proxy.
+Create Dockerfile for the React frontend and complete the Docker Compose configuration with Nginx reverse proxy.
 
 ## Context
 
@@ -17,7 +17,7 @@ TASK-038 adds CI/CD. This task starts Phase 15 — Production.
 - Create `frontend/Dockerfile` with multi-stage build
 - Add frontend service to Docker Compose
 - Configure Nginx reverse proxy
-- Route: `/` → Angular, `/api` → FastAPI, `/docs` → FastAPI docs
+- Route: `/` → React, `/api` → FastAPI, `/docs` → FastAPI docs
 - Configure proper headers
 - Set up SSL placeholder
 - Complete production Docker Compose

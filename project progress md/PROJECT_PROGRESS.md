@@ -17,7 +17,7 @@ Status: TODO
 ## Completed
 
 - TASK-001 — Initialize Git Repository and Create .gitignore
-- TASK-002 — Bootstrap Angular Frontend
+- TASK-002 — Bootstrap React Frontend
 - TASK-003 — Bootstrap FastAPI Backend
 - TASK-004 — Configure PostgreSQL and SQLAlchemy
 - TASK-005 — Configure Alembic Migrations
@@ -27,7 +27,7 @@ Status: TODO
 - TASK-009 — Implement User Registration
 - TASK-010 — Implement JWT Authentication
 - TASK-011 — Implement Refresh Tokens
-- TASK-012 — Implement Angular Auth Module
+- TASK-012 — Implement React Auth Module
 - TASK-013 — Implement Organizations
 
 ## In Progress
@@ -37,7 +37,7 @@ Status: TODO
 ## Todo
 
 - TASK-001 — Initialize Git Repository and Create .gitignore
-- TASK-002 — Bootstrap Angular Frontend
+- TASK-002 — Bootstrap React Frontend
 - TASK-003 — Bootstrap FastAPI Backend
 - TASK-004 — Configure PostgreSQL and SQLAlchemy
 - TASK-005 — Configure Alembic Migrations
@@ -47,7 +47,7 @@ Status: TODO
 - TASK-009 — Implement User Registration
 - TASK-010 — Implement JWT Authentication
 - TASK-011 — Implement Refresh Tokens
-- TASK-012 — Implement Angular Auth Module
+- TASK-012 — Implement React Auth Module
 - TASK-013 — Implement Organizations
 - TASK-014 — Implement Memberships and RBAC
 - TASK-015 — Implement Tenant Isolation Middleware
@@ -62,12 +62,12 @@ Status: TODO
 - TASK-024 — Implement RAG Pipeline
 - TASK-025 — Implement Conversations API
 - TASK-026 — Implement SSE Streaming
-- TASK-027 — Implement Angular Chat UI
+- TASK-027 — Implement React Chat UI
 - TASK-028 — Implement Tickets and Human Handoff
 - TASK-029 — Implement Agent Dashboard
 - TASK-030 — Implement Evaluation System
 - TASK-031 — Implement Analytics
-- TASK-032 — Implement Angular Dashboard and Analytics UI
+- TASK-032 — Implement React Dashboard and Analytics UI
 - TASK-033 — Implement Knowledge Base UI
 - TASK-034 — Implement Settings and Organization UI
 - TASK-035 — Implement Rate Limiting
@@ -99,7 +99,7 @@ TASK-014
 - Local LLM inference will use Ollama.
 - Object storage will use MinIO.
 - The application must remain free/open-source/self-hostable.
-- Angular frontend with feature-based architecture.
+- React frontend with feature-based architecture (Vite, TanStack Query, MUI, Tailwind).
 - FastAPI backend with layered architecture.
 - Celery for background job processing.
 - Redis for caching and message broker.
@@ -111,7 +111,7 @@ TASK-014
 
 ```
 SupportAI/
-├── frontend/          (Angular - TBD)
+├── frontend/          (React - TBD)
 ├── backend/           (FastAPI - TBD)
 ├── infrastructure/    (Terraform - TBD)
 ├── docker/            (Docker configs - TBD)
