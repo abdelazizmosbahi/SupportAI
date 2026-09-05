@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-014 — Implement Memberships and RBAC
+TASK-015 — Implement Tenant Isolation Middleware
 
 Status: TODO
 
@@ -29,6 +29,7 @@ Status: TODO
 - TASK-011 — Implement Refresh Tokens
 - TASK-012 — Implement React Auth Module
 - TASK-013 — Implement Organizations
+- TASK-014 — Implement Memberships and RBAC
 
 ## In Progress
 
@@ -83,15 +84,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-013 — Implement Organizations
+TASK-014 — Implement Memberships and RBAC
 
 ## Last Commit
 
-TASK-013: Implement organization CRUD with memberships and roles — 2026-09-04 17:35
+TASK-014: Implement memberships and RBAC with permission checking — 2026-09-05
 
 ## Next Task
 
-TASK-014
+TASK-015
 
 ## Important Notes
 
@@ -133,4 +134,4 @@ SupportAI/
 
 ## Git Status
 
-Initialized. 2 commits on `main`. Working tree clean.
+Working tree clean on `main`.

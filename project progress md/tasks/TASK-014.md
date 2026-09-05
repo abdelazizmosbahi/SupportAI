@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -39,16 +39,16 @@ TASK-013 creates organizations. This task adds RBAC.
 
 ## Acceptance Criteria
 
-- [ ] OWNER can manage all members
-- [ ] ADMIN can manage members (except OWNER)
-- [ ] AGENT can only manage conversations
-- [ ] VIEWER has read-only access
-- [ ] Unauthorized actions return 403
+- [x] OWNER can manage all members
+- [x] ADMIN can manage members (except OWNER)
+- [x] AGENT can only manage conversations
+- [x] VIEWER has read-only access
+- [x] Unauthorized actions return 403
 
 ## Tests Required
 
-- [ ] RBAC enforcement tests
-- [ ] Permission matrix test
+- [x] RBAC enforcement tests
+- [x] Permission matrix test
 
 ## Dependencies
 
@@ -56,8 +56,14 @@ TASK-013 creates organizations. This task adds RBAC.
 
 ## Notes
 
-None
+- Roles: OWNER, ADMIN, AGENT, VIEWER defined centrally in `app/core/permissions.py` with permission codes.
+- Permission checking dependency `require_permission(permission)` validates membership + role permission and returns 403 on failure.
+- Member endpoints: GET/POST `/organizations/{org_id}/members`, PATCH/DELETE `/organizations/{org_id}/members/{user_id}`.
+- Invitation is basic: invites an existing registered user by email (no invite email/link yet).
+- OWNER protection rules: only OWNER can manage OWNER role; a member cannot demote themselves from OWNER; the last OWNER cannot leave.
+- Seed migration `0002_seed_roles` inserts the four roles with their permission sets.
+- Organization write endpoints refactored to use `require_permission` (PATCH requires `organization.update`, DELETE requires `organization.delete` = OWNER-only).
 
 ## Completion
 
-Not completed.
+Completed.

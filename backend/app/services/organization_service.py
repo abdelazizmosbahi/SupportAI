@@ -3,30 +3,19 @@ import uuid
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.permissions import ROLE_OWNER, ensure_roles_seeded, get_role_by_name
 from app.models.membership import Membership
 from app.models.organization import Organization
 from app.models.role import Role
 from app.schemas.organization import OrganizationCreate, OrganizationUpdate
 
-OWNER_ROLE_NAME = "OWNER"
+OWNER_ROLE_NAME = ROLE_OWNER
 
 
 async def get_or_create_owner_role(db: AsyncSession) -> Role:
-    result = await db.execute(select(Role).where(Role.name == OWNER_ROLE_NAME))
-    role = result.scalar_one_or_none()
-    if role is None:
-        role = Role(
-            name=OWNER_ROLE_NAME,
-            permissions=[
-                "organization:read",
-                "organization:update",
-                "organization:delete",
-                "members:manage",
-            ],
-        )
-        db.add(role)
-        await db.flush()
-        await db.refresh(role)
+    await ensure_roles_seeded(db)
+    role = await get_role_by_name(db, OWNER_ROLE_NAME)
+    assert role is not None
     return role
 
 
