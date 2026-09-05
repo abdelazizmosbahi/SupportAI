@@ -69,10 +69,6 @@ test-results/
 playwright-report/
 coverage/
 
-# Alembic
-backend/alembic/versions/*.py
-!backend/alembic/versions/.gitkeep
-
 # Temporary files
 *.tmp
 *.temp
