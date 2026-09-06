@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-016 — Configure MinIO and File Storage Service
+TASK-017 — Implement Document Upload API
 
 Status: TODO
 
@@ -31,6 +31,7 @@ Status: TODO
 - TASK-013 — Implement Organizations
 - TASK-014 — Implement Memberships and RBAC
 - TASK-015 — Implement Tenant Isolation Middleware
+- TASK-016 — Configure MinIO and File Storage Service
 
 ## In Progress
 
@@ -85,15 +86,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-015 — Implement Tenant Isolation Middleware
+TASK-016 — Configure MinIO and File Storage Service
 
 ## Last Commit
 
-TASK-015: Implement tenant isolation middleware with resolve_tenant dependency — 2026-09-06
+TASK-016: implement MinIO file storage service with validation and tenant-scoped keys — 2026-09-06
 
 ## Next Task
 
-TASK-016
+TASK-017
 
 ## Important Notes
 

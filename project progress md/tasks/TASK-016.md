@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -14,13 +14,13 @@ TASK-015 completes tenant isolation. This task starts Phase 4 — Knowledge Base
 
 ## Requirements
 
-- Install minio Python client
-- Create storage service with upload, download, delete operations
-- Create buckets: `documents`, `avatars`, `exports`
-- Configure MinIO connection via environment variables
-- Handle file validation (extension, MIME type, size)
-- Generate unique storage keys
-- Integrate with tenant context for bucket organization
+- [x] Install minio Python client
+- [x] Create storage service with upload, download, delete operations
+- [x] Create buckets: `documents`, `avatars`, `exports`
+- [x] Configure MinIO connection via environment variables
+- [x] Handle file validation (extension, MIME type, size)
+- [x] Generate unique storage keys
+- [x] Integrate with tenant context for bucket organization
 
 ## Files Expected To Change
 
@@ -29,23 +29,23 @@ TASK-015 completes tenant isolation. This task starts Phase 4 — Knowledge Base
 
 ## Implementation Plan
 
-1. Install minio client
-2. Create storage service
-3. Configure MinIO connection
-4. Implement upload/download/delete
-5. Test file operations
+1. [x] Install minio client
+2. [x] Create storage service
+3. [x] Configure MinIO connection
+4. [x] Implement upload/download/delete
+5. [x] Test file operations
 
 ## Acceptance Criteria
 
-- [ ] File upload to MinIO works
-- [ ] File download from MinIO works
-- [ ] File deletion works
-- [ ] Bucket creation works
-- [ ] File validation works
+- [x] File upload to MinIO works
+- [x] File download from MinIO works
+- [x] File deletion works
+- [x] Bucket creation works
+- [x] File validation works
 
 ## Tests Required
 
-- [ ] Upload/download/delete tests
+- [x] Upload/download/delete tests
 
 ## Dependencies
 
@@ -53,8 +53,10 @@ TASK-015 completes tenant isolation. This task starts Phase 4 — Knowledge Base
 
 ## Notes
 
-None
+MinIO service already existed in `docker-compose.yml`; MinIO settings were already in
+`config.py` / `.env.example`. Verification ran against a live local MinIO
+(`docker compose up -d minio`).
 
 ## Completion
 
-Not completed.
+Completed.
