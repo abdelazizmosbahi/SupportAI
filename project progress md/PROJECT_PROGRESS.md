@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-017 — Implement Document Upload API
+TASK-018 — Configure Redis and Celery
 
 Status: TODO
 
@@ -32,6 +32,7 @@ Status: TODO
 - TASK-014 — Implement Memberships and RBAC
 - TASK-015 — Implement Tenant Isolation Middleware
 - TASK-016 — Configure MinIO and File Storage Service
+- TASK-017 — Implement Document Upload API
 
 ## In Progress
 
@@ -86,15 +87,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-016 — Configure MinIO and File Storage Service
+TASK-017 — Implement Document Upload API
 
 ## Last Commit
 
-TASK-016: implement MinIO file storage service with validation and tenant-scoped keys — 2026-09-06
+TASK-017: implement document upload API with MinIO storage and tenant isolation — 2026-09-06
 
 ## Next Task
 
-TASK-017
+TASK-018
 
 ## Important Notes
 

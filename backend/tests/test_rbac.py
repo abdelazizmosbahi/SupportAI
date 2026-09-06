@@ -133,6 +133,47 @@ class TestRequirePermission:
         assert exc.value.status_code == 403
 
 
+class TestRequireTenant:
+    @pytest.fixture
+    def actor(self):
+        return make_membership(uuid.uuid4(), uuid.uuid4())
+
+    async def test_returns_full_context_with_permission(self, monkeypatch, actor):
+        context = make_context(actor, "ADMIN", [perm.PERMISSION_DOCUMENTS_CREATE])
+
+        async def fake_resolve_tenant(db, user_id, org_id):
+            return context
+
+        monkeypatch.setattr(perm, "resolve_tenant", fake_resolve_tenant)
+
+        checker = perm.require_tenant(perm.PERMISSION_DOCUMENTS_CREATE)
+        result = await checker(
+            org_id=actor.organization_id,
+            request=None,
+            current_user=type("U", (), {"id": actor.user_id})(),
+            db=object(),
+        )
+        assert result is context
+
+    async def test_forbids_missing_permission(self, monkeypatch, actor):
+        context = make_context(actor, "VIEWER", [perm.PERMISSION_DOCUMENTS_READ])
+
+        async def fake_resolve_tenant(db, user_id, org_id):
+            return context
+
+        monkeypatch.setattr(perm, "resolve_tenant", fake_resolve_tenant)
+
+        checker = perm.require_tenant(perm.PERMISSION_DOCUMENTS_CREATE)
+        with pytest.raises(HTTPException) as exc:
+            await checker(
+                org_id=actor.organization_id,
+                request=None,
+                current_user=type("U", (), {"id": actor.user_id})(),
+                db=object(),
+            )
+        assert exc.value.status_code == 403
+
+
 class FakeMembershipDb:
     """Fake AsyncSession backed by a {(user_id, org_id): Membership} map.
 

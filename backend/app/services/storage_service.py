@@ -60,6 +60,7 @@ class StorageAccessError(PermissionError):
 class StoredFile:
     bucket: str
     storage_key: str
+    content_type: str | None = None
 
 
 def validate_file(filename: str, content_type: str | None, size_bytes: int) -> None:
@@ -139,18 +140,23 @@ class StorageService:
 
         bucket = bucket_for_category(category)
         storage_key = generate_storage_key(tenant.organization_id, category, filename)
+        effective_content_type = (
+            content_type
+            or mimetypes.guess_type(filename)[0]
+            or "application/octet-stream"
+        )
         self.client.put_object(
             bucket,
             storage_key,
             BytesIO(content),
             length=len(content),
-            content_type=(
-                content_type
-                or mimetypes.guess_type(filename)[0]
-                or "application/octet-stream"
-            ),
+            content_type=effective_content_type,
         )
-        return StoredFile(bucket=bucket, storage_key=storage_key)
+        return StoredFile(
+            bucket=bucket,
+            storage_key=storage_key,
+            content_type=effective_content_type,
+        )
 
     def download(self, *, tenant: TenantContext, bucket: str, storage_key: str) -> bytes:
         """Download an object's bytes, enforcing the tenant's key prefix."""

@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
 from app.core.security import get_current_user
-from app.core.tenant import resolve_tenant
+from app.core.tenant import TenantContext, resolve_tenant
 from app.models.role import Role
 from app.models.user import User
 
@@ -193,7 +193,26 @@ async def ensure_roles_seeded(db: AsyncSession) -> None:
     await db.flush()
 
 
+async def _authorize(
+    db: AsyncSession, user_id: uuid.UUID, org_id: uuid.UUID, permission: str
+) -> TenantContext:
+    """Resolve the tenant context and require the given permission (403 otherwise)."""
+    context = await resolve_tenant(db, user_id, org_id)
+    if permission not in context.permissions:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Insufficient permissions",
+        )
+    return context
+
+
 def require_permission(permission: str):
+    """Dependency yielding the Membership of a permitted member.
+
+    Resolves the tenant context for ``org_id`` and raises 403 if the user lacks
+    the permission. Returns the membership so services can act as the member.
+    """
+
     async def permission_checker(
         org_id: uuid.UUID,
         request: Request,
@@ -201,12 +220,26 @@ def require_permission(permission: str):
         db: AsyncSession = Depends(get_db),
     ):
         del request
-        context = await resolve_tenant(db, current_user.id, org_id)
-        if permission not in context.permissions:
-            raise HTTPException(
-                status_code=status.HTTP_403_FORBIDDEN,
-                detail="Insufficient permissions",
-            )
+        context = await _authorize(db, current_user.id, org_id, permission)
         return context.membership
 
     return permission_checker
+
+
+def require_tenant(permission: str):
+    """Dependency yielding the full TenantContext of a permitted member.
+
+    Same authorization as ``require_permission``, but returns the resolved
+    tenant context (used by endpoints that need organization_id / user_id).
+    """
+
+    async def tenant_checker(
+        org_id: uuid.UUID,
+        request: Request,
+        current_user: User = Depends(get_current_user),
+        db: AsyncSession = Depends(get_db),
+    ):
+        del request
+        return await _authorize(db, current_user.id, org_id, permission)
+
+    return tenant_checker
