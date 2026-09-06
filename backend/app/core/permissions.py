@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
 from app.core.security import get_current_user
-from app.models.membership import Membership
+from app.core.tenant import resolve_tenant
 from app.models.role import Role
 from app.models.user import User
 
@@ -179,22 +179,6 @@ ROLE_PERMISSIONS_MAP: dict[str, list[str]] = {
 }
 
 
-async def _resolve_role(db: AsyncSession, role_id: uuid.UUID) -> Role | None:
-    return await db.get(Role, role_id)
-
-
-async def _get_membership(
-    db: AsyncSession, user_id: uuid.UUID, org_id: uuid.UUID
-) -> Membership | None:
-    result = await db.execute(
-        select(Membership).where(
-            Membership.user_id == user_id,
-            Membership.organization_id == org_id,
-        )
-    )
-    return result.scalar_one_or_none()
-
-
 async def get_role_by_name(db: AsyncSession, role_name: str) -> Role | None:
     result = await db.execute(select(Role).where(Role.name == role_name))
     return result.scalar_one_or_none()
@@ -217,18 +201,12 @@ def require_permission(permission: str):
         db: AsyncSession = Depends(get_db),
     ):
         del request
-        membership = await _get_membership(db, current_user.id, org_id)
-        if membership is None:
-            raise HTTPException(
-                status_code=status.HTTP_403_FORBIDDEN,
-                detail="You are not a member of this organization",
-            )
-        role = await _resolve_role(db, membership.role_id)
-        if role is None or permission not in role.permissions:
+        context = await resolve_tenant(db, current_user.id, org_id)
+        if permission not in context.permissions:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="Insufficient permissions",
             )
-        return membership
+        return context.membership
 
     return permission_checker

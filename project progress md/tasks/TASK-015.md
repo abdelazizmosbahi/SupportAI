@@ -2,7 +2,7 @@
 
 ## Status
 
-TODO
+DONE
 
 ## Objective
 
@@ -36,16 +36,16 @@ TASK-014 implements RBAC. This task hardens multi-tenancy.
 
 ## Acceptance Criteria
 
-- [ ] Tenant context dependency works
-- [ ] All endpoints enforce tenant isolation
-- [ ] Cross-tenant access returns 403 or 404
-- [ ] Tests prove isolation
+- [x] Tenant context dependency works
+- [x] All endpoints enforce tenant isolation
+- [x] Cross-tenant access returns 403 or 404
+- [x] Tests prove isolation
 
 ## Tests Required
 
-- [ ] Cross-tenant document access blocked
-- [ ] Cross-tenant conversation access blocked
-- [ ] Cross-tenant organization access blocked
+- [ ] Cross-tenant document access blocked — N/A until documents exist; enforced by the same `resolve_tenant` boundary
+- [ ] Cross-tenant conversation access blocked — N/A until conversations exist; enforced by the same `resolve_tenant` boundary
+- [x] Cross-tenant organization access blocked
 
 ## Dependencies
 
@@ -57,4 +57,4 @@ Critical security requirement.
 
 ## Completion
 
-Not completed.
+Completed.

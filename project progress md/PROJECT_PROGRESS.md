@@ -10,7 +10,7 @@ Phase 1 — Project Setup
 
 ## Current Task
 
-TASK-015 — Implement Tenant Isolation Middleware
+TASK-016 — Configure MinIO and File Storage Service
 
 Status: TODO
 
@@ -30,6 +30,7 @@ Status: TODO
 - TASK-012 — Implement React Auth Module
 - TASK-013 — Implement Organizations
 - TASK-014 — Implement Memberships and RBAC
+- TASK-015 — Implement Tenant Isolation Middleware
 
 ## In Progress
 
@@ -84,15 +85,15 @@ Status: TODO
 
 ## Last Completed Task
 
-TASK-014 — Implement Memberships and RBAC
+TASK-015 — Implement Tenant Isolation Middleware
 
 ## Last Commit
 
-TASK-014: Implement memberships and RBAC with permission checking — 2026-09-05
+TASK-015: Implement tenant isolation middleware with resolve_tenant dependency — 2026-09-06
 
 ## Next Task
 
-TASK-015
+TASK-016
 
 ## Important Notes
 
