@@ -2,13 +2,11 @@ import secrets
 import uuid
 from datetime import UTC, datetime, timedelta
 
-from fastapi import Depends, HTTPException, status
+from fastapi import HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload
 
 from app.core.config import settings
-from app.core.database import get_db
 from app.models.refresh_token import RefreshToken
 
 

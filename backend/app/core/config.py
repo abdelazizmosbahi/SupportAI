@@ -1,5 +1,9 @@
+from pathlib import Path
+
 from pydantic import field_validator
 from pydantic_settings import BaseSettings
+
+BACKEND_ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 
 class Settings(BaseSettings):
@@ -27,8 +31,8 @@ class Settings(BaseSettings):
     MINIO_BUCKET_EXPORTS: str = "exports"
     MINIO_SECURE: bool = False
 
-    # JWT
-    JWT_SECRET: str = "change-me-in-production"
+    # JWT (secret must come from the environment / .env, never hardcoded)
+    JWT_SECRET: str | None = None
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
     JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = 7
@@ -65,9 +69,12 @@ class Settings(BaseSettings):
 
     @field_validator("JWT_SECRET")
     @classmethod
-    def validate_jwt_secret(cls, v: str) -> str:
-        if v == "change-me-in-production" and cls.model_fields["APP_ENV"].default == "production":
-            raise ValueError("JWT_SECRET must be changed in production")
+    def validate_jwt_secret(cls, v: str | None) -> str:
+        if not v:
+            raise ValueError(
+                "JWT_SECRET must be set: keep secrets in backend/.env (see .env.example), "
+                "never hardcode them in source"
+            )
         return v
 
     @field_validator("DATABASE_URL")
@@ -82,7 +89,11 @@ class Settings(BaseSettings):
     def normalize_extensions(cls, v: list[str]) -> list[str]:
         return [ext.lower().lstrip(".") for ext in v]
 
-    model_config = {"env_file": ".env", "env_file_encoding": "utf-8", "extra": "ignore"}
+    model_config = {
+        "env_file": BACKEND_ENV_FILE,
+        "env_file_encoding": "utf-8",
+        "extra": "ignore",
+    }
 
 
 settings = Settings()

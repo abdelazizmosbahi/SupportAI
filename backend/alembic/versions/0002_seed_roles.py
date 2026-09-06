@@ -6,6 +6,7 @@ Create Date: 2026-09-04 18:20
 
 """
 import json
+import uuid
 
 import sqlalchemy as sa
 
@@ -20,12 +21,14 @@ depends_on = None
 
 def upgrade() -> None:
     for role_name, permissions in ROLE_PERMISSIONS_MAP.items():
+        role_id = str(uuid.uuid4())
         permissions_json = json.dumps(permissions)
         op.execute(
             sa.text(
-                "INSERT INTO roles (name, permissions) "
-                "VALUES (:name, CAST(:permissions AS json))"
+                "INSERT INTO roles (id, name, permissions) "
+                "VALUES (CAST(:id AS uuid), :name, CAST(:permissions AS json))"
             ).bindparams(
+                sa.bindparam("id", role_id),
                 sa.bindparam("name", role_name),
                 sa.bindparam("permissions", permissions_json),
             )
